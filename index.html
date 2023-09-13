@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+
+    <!-- Font Awesome for cart icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          rel="stylesheet">
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Your Mutual Fund Advice</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container">
+             <!-- Navbar brand with logo -->
+             <a class="navbar-brand mx-auto mx-lg-0" href="#">
+                <img src="./logo.jpg" alt="Logo" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            </a>
+            
+
+        <!-- Hamburger menu button for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-auto"> <!-- ml-auto pushes the links to the right -->
+                <!-- Home link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <!-- About link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <!-- Contact link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Cart icon with badge -->
+        <div class="navbar-cart">
+            <a href="cart.html" class="nav-link">
+                <i class="fas fa-shopping-cart cart-icon"></i> Cart
+                <span class="cart-badge">0</span>
+            </a>
+            
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownCart" id="cart-dropdown">
+                <!-- Cart items will be displayed here -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Carousel Section -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./Guide on How Mutual Funds Work_20200809-141343.jpg" class="d-block w-100 custom-carousel-img" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="./card3.jpg" class="d-block w-100 custom-carousel-img" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="./carrd2.jpg" class="d-block w-100 custom-carousel-img" alt="Image 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- End of Carousel -->
+
+<!-- Your page content goes here -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="text-primary">Welcome to Mutual Fund Advice</h1>
+            <p class="text-secondary">Get expert advice on mutual funds and investment opportunities.</p>
+            <a href="#" class="btn btn-success">Explore Now</a>
+        </div>
+        <div class="col-md-6">
+            <img src="./pexels-anna-tarazevich-5697255.jpg" alt="Image" class="img-fluid rounded">
+        </div>
+    </div>
+</div>
+
+<!-- Mutual Fund Advice Cards Section -->
+<div class="container mt-5">
+    <h2 class="text-primary mb-4">Mutual Fund Advice</h2>
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 fixed-height-card">
+            <div class="card mb-4">
+                <img src="./card2.jpg" class="card-img-top img-fluid" alt="Fund 1">
+                <div class="card-body">
+                    <h5 class="card-title">Matual Fund 1</h5>
+                    <p class="card-text text-secondary">Description for Fund 1 goes here.</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Fund Name 1')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fixed-height-card">
+            <div class="card mb-4">
+                <img src="./pexels-anna-tarazevich-5697261.jpg" class="card-img-top img-fluid" alt="Fund 1">
+                <div class="card-body">
+                    <h5 class="card-title">Matual Fund 2</h5>
+                    <p class="card-text text-secondary">Description for Fund 1 goes here.</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Fund Name 2')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fixed-height-card">
+            <div class="card mb-4">
+                <img src="./card3.jpg" class="card-img-top img-fluid" alt="Fund 1">
+                <div class="card-body">
+                    <h5 class="card-title">Matual Fund 3</h5>
+                    <p class="card-text text-secondary">Description for Fund 1 goes here.</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Fund Name 3')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fixed-height-card">
+            <div class="card mb-4">
+                <img src="./card4.jpg" class="card-img-top img-fluid" alt="Fund 1">
+                <div class="card-body">
+                    <h5 class="card-title">Matual Fund 4</h5>
+                    <p class="card-text text-secondary">Description for Fund 1 goes here.</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Fund Name 4')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fixed-height-card">
+            <div class="card mb-4">
+                <img src="./carrd2.jpg" class="card-img-top img-fluid" alt="Fund 1">
+                <div class="card-body">
+                    <h5 class="card-title">Matual Fund 5</h5>
+                    <p class="card-text text-secondary">Description for Fund 1 goes here.</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Fund Name 5')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fixed-height-card">
+            <div class="card mb-4">
+                <img src="./Guide on How Mutual Funds Work_20200809-141343.jpg" class="card-img-top img-fluid" alt="Fund 1">
+                <div class="card-body">
+                    <h5 class="card-title">Matual Fund 6</h5>
+                    <p class="card-text text-secondary">Description for Fund 1 goes here.</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Fund Name 6')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 (Repeat structure for more cards) -->
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="bg-primary text-white text-center py-3">
+    <div class="container">
+        <p>&copy; 2023 Mutual Fund Advice. All rights reserved.</p>
+        <p>123 Main Street, City, State 12345</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (required) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+<!-- Font Awesome JS (required for cart icon) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+<script>
+    // Cart functionality
+   // Add this code inside the <script> tag in your main page
+
+// Cart functionality
+let cartItems = [];
+
+function addToCart(item) {
+    cartItems.push(item);
+    updateCartBadge();
+    updateCartDropdown();
+}
+
+function updateCartBadge() {
+    const cartBadge = document.querySelector(".cart-badge");
+    cartBadge.textContent = cartItems.length;
+}
+
+function updateCartDropdown() {
+    const cartDropdown = document.getElementById("cart-dropdown");
+    cartDropdown.innerHTML = "";
+
+    if (cartItems.length === 0) {
+        const emptyCartMessage = document.createElement("div");
+        emptyCartMessage.classList.add("dropdown-item", "text-muted");
+        emptyCartMessage.textContent = "Your cart is empty.";
+        cartDropdown.appendChild(emptyCartMessage);
+    } else {
+        cartItems.forEach(item => {
+            const cartItem = document.createElement("a");
+            cartItem.classList.add("dropdown-item");
+            cartItem.textContent = item;
+            cartDropdown.appendChild(cartItem);
+        });
+    }
+}
+
+// Pass cart items to the cart page
+document.addEventListener("DOMContentLoaded", function () {
+    const cartLink = document.querySelector(".nav-link");
+    cartLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        // Serialize the cartItems array and pass it as a query parameter
+        const cartItemsQueryParam = cartItems.join(",");
+        window.location.href = `cart.html?items=${cartItemsQueryParam}`;
+    });
+});
+
+</script>
+</body>
+</html>
